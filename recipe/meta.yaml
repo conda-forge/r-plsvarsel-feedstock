@@ -15,8 +15,7 @@ source:
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
-  noarch: generic
+  number: 1002
   rpaths:
     - lib/R/lib/
     - lib/
@@ -48,11 +47,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=plsVarSel
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Interfaces and methods for variable selection in Partial Least Squares. The methods
     include filter methods, wrapper methods and embedded methods. Both regression and
     classification is supported.
-  license_family: GPL3
+  license_family: GPL
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
