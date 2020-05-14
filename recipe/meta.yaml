@@ -21,8 +21,6 @@ build:
     - lib/
 
 requirements:
-  build:
-
   host:
     - r-base
     - r-mass
@@ -31,6 +29,8 @@ requirements:
     - r-mvtnorm
     - r-pls
     - r-progress
+    - r-msqc
+    - r-praznik
   run:
     - r-base
     - r-mass
@@ -39,6 +39,8 @@ requirements:
     - r-mvtnorm
     - r-pls
     - r-progress
+    - r-msqc
+    - r-praznik
 
 test:
   commands:
