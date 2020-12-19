@@ -5,11 +5,9 @@ Home: https://CRAN.R-project.org/package=plsVarSel
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-plsvarsel-feedstock/blob/master/LICENSE.txt)
 
 Summary: Interfaces and methods for variable selection in Partial Least Squares. The methods include filter methods, wrapper methods and embedded methods. Both regression and classification is supported.
-
-
 
 Current build status
 ====================
