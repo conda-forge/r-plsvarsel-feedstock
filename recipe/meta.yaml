@@ -1,4 +1,4 @@
-{% set version = '0.9.4' %}
+{% set version = "0.9.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/plsVarSel_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plsVarSel/plsVarSel_{{ version }}.tar.gz
-  sha256: e105ba41bc2f79c71054d4124f82839ae68192fec9f29a52a2b87449743bbfa7
+  sha256: 4bd2d40d42c79920842f45df0a96930a81e65009c2ac33df29097bf39ff51282
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1004
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,19 +25,23 @@ requirements:
 
   host:
     - r-base
-    - r-mass
     - r-bdsmatrix
     - r-genalg
+    - r-mass
+    - r-msqc
     - r-mvtnorm
     - r-pls
+    - r-praznik
     - r-progress
   run:
     - r-base
-    - r-mass
     - r-bdsmatrix
     - r-genalg
+    - r-mass
+    - r-msqc
     - r-mvtnorm
     - r-pls
+    - r-praznik
     - r-progress
 
 test:
@@ -47,32 +51,14 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=plsVarSel
+  dev_url: https://github.com/khliland/plsVarSel/
   license: GPL-2.0-or-later
-  summary: Interfaces and methods for variable selection in Partial Least Squares. The methods
-    include filter methods, wrapper methods and embedded methods. Both regression and
-    classification is supported.
+  summary: Interfaces and methods for variable selection in Partial Least Squares. The methods include filter methods, wrapper methods and embedded methods. Both regression and classification is supported.
   license_family: GPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: 
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Encoding: UTF-8
-# Package: plsVarSel
-# Type: Package
-# Title: Variable Selection in Partial Least Squares
-# Version: 0.9.4
-# Date: 2017-12-15
-# Author: Kristian Hovde Liland, Tahir Mehmood, Solve Sb
-# Maintainer: Kristian Hovde Liland <kristian.liland@nmbu.no>
-# Description: Interfaces and methods for variable selection in Partial Least Squares. The methods include filter methods, wrapper methods and embedded methods. Both regression and classification is supported.
-# License: GPL (>= 2)
-# Depends: pls
-# Imports: grDevices, graphics, genalg, mvtnorm, bdsmatrix, MASS, progress, parallel, stats
-# Suggests: Rmpi
-# RoxygenNote: 6.0.1
-# NeedsCompilation: no
-# Packaged: 2017-12-15 15:38:54 UTC; kristl
-# Repository: CRAN
-# Date/Publication: 2017-12-15 17:48:26 UTC
