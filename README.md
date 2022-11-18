@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-plsvarsel-fee
 
 Summary: Interfaces and methods for variable selection in Partial Least Squares. The methods include filter methods, wrapper methods and embedded methods. Both regression and classification is supported.
 
+Development: https://github.com/khliland/plsVarSel/
+
 Current build status
 ====================
 
