@@ -1,4 +1,4 @@
-{% set version = "0.9.10" %}
+{% set version = "0.9.11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/plsVarSel_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/plsVarSel/plsVarSel_{{ version }}.tar.gz
-  sha256: cf0893d8df57d6f0e1c919ed1071d6a0186153ad545ea4b554006913f8260f2b
+  sha256: 6b5a16a5802fc44443ce22ebc5c959088a36f77ce56b2bb0c9e3deac7ce89d49
 
 build:
   noarch: generic
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
